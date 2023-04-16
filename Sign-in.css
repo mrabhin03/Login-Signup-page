@@ -1,0 +1,32 @@
+body{
+    background-image: url(https://img.freepik.com/free-vector/gradient-purple-color-gradient-background-abstract-design-modern_343694-2245.jpg?w=740&t=st=1681226916~exp=1681227516~hmac=e77d8a4e97231ed91a95a0c6fc20812739db0da90d9293b5f881e7dfda4b1a8f);
+    background-size: cover;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.Main{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 700px;
+    width: 1500px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.page
+{
+    height: 600px;
+    width: 400px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.page .pbox{
+    width: 100%;
+    padding: 40px;
+    background-color: aqua;
+}
+.pbox h2{
+    text-align:center;
+    font-size: 40px;
+}
