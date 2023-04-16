@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>
+            Home
+        </title>
+        <link rel="icon" href="https://img.icons8.com/color/256/html-5--v1.png">
+        <style>
+            .main{
+                height: 100%;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+            }
+            .page{
+                height: 500px;
+                width: 500px;
+                background-color: rgb(44, 44, 44);
+                border-radius: 45px;
+                
+            }
+            .q1{
+                height: 300px;
+                width: 400px;
+                margin-top: 20px;
+                margin-left: 50;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+            }
+            .yes{
+                transition: transform .3s ease-in-out;
+                font-size: 15px;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                float: left;
+                margin-top: 10px;
+                margin-left: 50px;
+                height: 100px;
+                width: 200px;
+                background-color: rgb(74, 189, 104);
+                border-radius: 180px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                
+            }
+            .yes:hover{
+                transform: scale(1.05);
+            }
+            .no{
+                margin: 10px;
+                font-size: 15px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                float: left;
+                height: 100px;
+                width: 200px;
+                background-color: rgb(24, 116, 196);
+                border-radius: 180px;
+                transition:transform .3s ease-in-out;
+            }
+            .no:hover{
+                transform:scale(1.05);
+            }
+            
+        </style>
+    </head>
+    <body bgcolor="#333333">
+        <div class="main">
+            <div class="page">
+                <div class="q1">
+                    <img  src="https://img.icons8.com/color/256/html-5--v1.png" alt="">
+                </div>
+                <div class="q2">
+                    <a style="color: inherit;" href="Sign-in.html">
+                        <div class="yes">
+                             <h1>Log in</h1>
+                        </div>
+                     </a>
+                    <div class="no">
+                        <h1 style="color: azure;">Sign up</h1>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+</html>
