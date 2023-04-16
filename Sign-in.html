@@ -12,20 +12,22 @@
         <div class="Main">
             <div class="page">
                 <label class="backi" >
-                    <a href="">
+                    <a href="Home.html">
                         <ion-icon name="arrow-back-outline"></ion-icon>
                     </a>
                 </label>  
                 <div class="pbox">
                     <h2>Login</h2>
-                    <form action="post">
+                    <form>
                         <div class="box">
-                            <label>Username</label><br>
+                            <div class="tx">
+                            <label for="Username">Username</label><br>
+                            </div>
                             <div class="i">
                               <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
                            </div>
                             <div class="inbox">
-                                <input type="text">
+                                <input type="text" id="Username" required placeholder="Type your username">
                            </div> 
                         </div>
                         <div class="box">
@@ -35,18 +37,14 @@
                                 <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
                             </div>
                             <div class="inbox">
-                                <input type="password">
+                                <input type="password" required placeholder="Type your password">
                             </div>
                             <div class="forgot">
-                                <h1 class="f_h1"><a href="https://mail.google.com/mail/u/0/"><b> Forgot password? </b></a> </h1>
+                                <h1 class="f_h1"><a href="forgot.html"><b> Forgot password? </b></a> </h1>
                             </div>
                         </div>
-                        <a href="https://www.youtube.com/">
-                            <div class="Submit">
-                                <div class="sq">
-                                    <h6>Login</h6>
-                                </div>
-                            </div>
+                        <a href="Welcom_page.html">
+                            <button class="button" type="submit"><h6>Login</h6></button>
                         </a>
                     </form>
                     <div class="other_main">
