@@ -24,6 +24,7 @@ body{
 .page .pbox{
     height: 500px;
     width: 80%;
+    margin-bottom: 70px;
     padding: 80px;
 }
 .pbox h2{
@@ -36,6 +37,7 @@ body{
     height: 50px;
     border-bottom: 3px solid rgb(155, 155, 155);
     margin: 20px;
+    margin-left: 5px;
 }
 .box input{
     position: relative;
@@ -58,7 +60,93 @@ body{
     height: 30px;
     width: 30px;
 }
-.qwer{
+.inbox{
     height: 30px;
     width: 370px;
+}
+.box label{
+    color: rgb(108, 108, 108);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.forgot{
+    margin: 1px;
+    float: right;
+    color: rgb(108, 108, 108);
+}
+.f_h1{
+    font-size: 13px;
+}
+.submit{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 40px;
+    margin-left: 9px;
+    background-color: aqua;
+    border-radius: 360px;
+    width: 300px;
+    height: 50px;
+    background-image: url(https://uploads-ssl.webflow.com/5a9ee6416e90d20001b20038/635aa147487b8374c113c246_horizontal.svg);
+}
+.submit h6{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 7px;
+    text-align: center;
+    font-size:27px;
+    color: white;
+}
+.sq{
+    
+    width: 100px;
+    height: 50px;
+    
+}
+.other_main
+{
+    height: 80px;
+    width: 320px;
+}
+.or{
+    height: 30px;
+}
+.or p{
+    color: rgb(108, 108, 108);
+    font-size: 12px;
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.log1{
+    margin-left: 70px;
+    height: 50px;
+    width: 50px;
+    float: left;
+    border-radius: 360px;
+}
+.log1 img{
+    height: 50px;
+    width: 50px;
+    border-radius: 360px;
+}
+.log2{
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin-left:15px ;
+    margin-right: 15px;
+}
+.log2 img{
+    height: 50px;
+    width: 50px;
+    border-radius: 360px;
+}
+.log3{
+    height: 50px;
+    width: 50px;
+    float: left;
+}
+.log3 img{
+    height: 50px;
+    width: 50px;
+    border-radius: 360px;
 }
