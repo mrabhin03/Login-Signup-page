@@ -23,8 +23,8 @@ body{
 }
 .page .pbox{
     height: 500px;
-    width: 100%;
-    padding: 40px;
+    width: 80%;
+    padding: 80px;
 }
 .pbox h2{
     text-align:center;
@@ -34,14 +34,31 @@ body{
     position: relative;
     width: 95%;
     height: 50px;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid rgb(155, 155, 155);
     margin: 20px;
 }
 .box input{
     position: relative;
-    width: 300px;
+    width: 270px;
     height: 30px;
-
     border: none;
-
+    outline: none;
+    background-color: transparent;
+}
+.icon{
+    
+    color: rgb(108, 108, 108);
+    font-size: 19px;
+}
+.i{
+    float: left;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 30px;
+    width: 30px;
+}
+.qwer{
+    height: 30px;
+    width: 370px;
 }
