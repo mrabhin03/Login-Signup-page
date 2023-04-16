@@ -10,6 +10,7 @@ a{
 .Main{
     align-items: center;
     justify-content: center;
+    backdrop-filter: blur(20px);
     display: flex;
     height: 100%;
     width: 100%;
@@ -19,7 +20,7 @@ a{
 {
     height: 600px;
     width: 400px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(244, 239, 239);
     border-radius: 20px;
     align-items: center;
     justify-content: center;
