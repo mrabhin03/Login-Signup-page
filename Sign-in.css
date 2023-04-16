@@ -150,3 +150,24 @@ body{
     width: 50px;
     border-radius: 360px;
 }
+.dont{
+    height: 20px;
+    width: 320px;
+    margin-top: 80px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.dont p{
+    font-size: 13px;
+}
+.sign_up{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 20px;
+    width: 320px;
+}
+.sign_up h1{
+    font-size: 14px;
+}
