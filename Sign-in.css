@@ -16,26 +16,96 @@ a{
     width: 100%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+.signup-link{
+    text-decoration: none;
+}
 .page
 {
     height: 600px;
     width: 400px;
-    background-color: rgb(244, 239, 239);
+    background-color: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
     align-items: center;
     justify-content: center;
     display: flex;
+    transition: height .3s ease-in-out;
+    overflow: hidden;
+    
+}
+.page.active{
+    height: 400px;
+    
+}
+.pbox1 h2{
+    transform: translateY(40px);
+}
+.pbox1 .box{
+    transform: translateY(50px);
+}
+.pbox1 .button{
+    margin-top: 70px;
+    margin-left: 30px;
+    width: 250px;
+    height: 40px;
 }
 .page .pbox{
     height: 500px;
     width: 80%;
     margin-bottom: 70px;
+    transform: translateX(165px);
+    transition: transform .3s ease;
 
+}
+.page .pbox1{
+    transition: transform .3s ease;
+    height: 400px;
+    width: 80%;
+    margin-bottom: 70px;
+    transform: translateX(300px);
+    
+}
+.pbox1 .log1 img{
+    height: 30px;
+    width: 30px;
+    margin-left: 30px;
+}
+
+.pbox1 .log2 img{
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+}
+.pbox1 .log3 img{
+    height: 30px;
+    width: 30px;
+    margin-left: -10px;
+}
+
+.pbox1 .dont{
+    margin-top: -40px;
+}
+.page.active .pbox{
+    transition: transform .3s ease;
+    transform: translateX(-600px);
+}
+.page.active .pbox1{
+    transition: transform .3s ease;
+    transform: translateX(-150px);
+}
+.page.active .backi{
+    transform: translatey(100px);
 }
 .pbox h2{
     text-align:center;
     font-size: 40px;
 }
+.pbox1 h2{
+    text-align:center;
+    font-size: 40px;
+}
+
+
+
 .box{
     position: relative;
     width: 95%;
@@ -91,7 +161,7 @@ a{
 .f_h1{
     font-size: 13px;
 }
-.button:hover{
+.pbox .button:hover{
     transform:scale(1.04);
     transform: translateY(-2px);
 }
@@ -158,9 +228,13 @@ a{
     border-radius: 360px;
 }
 .log1 img{
+    transition: transform .3s ease-in-out;
     height: 50px;
     width: 50px;
     border-radius: 360px;
+}
+.log1 img:hover{
+    transform: scale(1.05);
 }
 .log2{
     height: 50px;
@@ -170,9 +244,13 @@ a{
     margin-right: 15px;
 }
 .log2 img{
+    transition: transform .3s ease-in-out;
     height: 50px;
     width: 50px;
     border-radius: 360px;
+}
+.log2 img:hover{
+    transform: scale(1.05);
 }
 .log3{
     height: 50px;
@@ -180,9 +258,13 @@ a{
     float: left;
 }
 .log3 img{
+    transition: transform .3s ease-in-out;
     height: 50px;
     width: 50px;
     border-radius: 360px;
+}
+.log3 img:hover{
+    transform: scale(1.05);
 }
 .dont{
     height: 20px;
@@ -215,4 +297,15 @@ a{
     margin-top: -550px;
     margin-left: -350px;
     color: rgb(81, 81, 81);
+    transition: translatey .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+}
+.backi:hover{
+    transform: scale(1.5);
+}
+.sign:hover{
+    text-decoration: underline;
+}
+.f_h1:hover{
+    color: black;
 }
