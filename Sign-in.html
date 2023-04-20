@@ -14,8 +14,18 @@
         <div class="Main">
             <div class="page">
                 <label class="backi" >
-                    <a href="Home.html">
+                    <a class="arrow" href="#">
                         <ion-icon name="arrow-back-outline"></ion-icon>
+                    </a>
+                </label>
+                <label class="backi1" >
+                    <a class="arrow" href="#">
+                        <ion-icon name="arrow-back-outline"></ion-icon>
+                    </a>
+                </label>
+                <label class="rel" >
+                    <a class="re" href="#">
+                        <ion-icon name="reload-circle-outline"></ion-icon>
                     </a>
                 </label>  
                 <div class="pbox">
@@ -42,11 +52,11 @@
                                 <input type="password" required placeholder="Type your password">
                             </div>
                             <div class="forgot">
-                                <h1 class="f_h1"><a href="forgot.html"><b> Forgot password? </b></a> </h1>
+                                <h1 class="f_h1"><a class="forgot" href="#"><b> Forgot password? </b></a> </h1>
                             </div>
                         </div>
                         
-                            <button class="button" type="submit"><a href="Home.html"><h6>Login</h6></a></button>
+                            <button class="button1" type="submit"><a href="#"><h6>Login</h6></a></button>
                     </form>
                     <div class="other_main">
                         <div class="or">
@@ -78,7 +88,7 @@
                 </div>
 
                 <div class="pbox1">
-                    <h2>Sign Up</h2>
+                    <h2>SIGN UP</h2>
                     <form>
                         <div class="box">
                             <div class="tx">
@@ -121,6 +131,54 @@
                         <h1 class="sign">Log in</h1></a>
                     </div>
                 </div>
+                <div class="pbox3">
+                    <form>
+                        <h2>SIGN UP</h2>    
+                        <p class="p1">Basic Information</p>
+                        <p class="p2">Enter your birthday and gender</p>
+                      <div class="D-day">
+                        <label class="l-day" for="day">Day</label>
+                        <input type="number" class="day" id="day" name="day" required>
+                      </div>
+                      <div class="D-month">
+                        <label class="l-month" for="month">Month</label>
+                        <select class="month" name="month" id="month">
+                            <option value=""></option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                            
+                        </select>
+                    </div>
+                      <div class="D-year">
+                        <label class="l-year" for="year">Year</label>
+                        <input type="number" class="year" id="year" name="year"required>
+                      </div>
+                      <div class="D-gender">
+                        
+                        <label for="gender" class="l-gender">Gender</label>
+                        <select id="gender" class="gender" name="gender" required>
+                          <option value=""></option>
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
+                          <option value="other">Other</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <button class="button-back" type="button"><a href="#" class="back1"><h6>Back</h6></a></button>
+                        <button class="button-next" type="button"><a href="#" class="next1"><h6>Next</h6></a></button>
+                      </div>
+                    </form>
+                  </div>
             </div>
         </div>
         <script src="Sign-in.js"></script>

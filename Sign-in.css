@@ -10,7 +10,7 @@ a{
 .Main{
     align-items: center;
     justify-content: center;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(5px);
     display: flex;
     height: 100%;
     width: 100%;
@@ -21,6 +21,8 @@ a{
 }
 .page
 {
+    position: relative;
+    overflow: hidden;
     height: 600px;
     width: 400px;
     background-color: rgba(255, 255, 255, 0.95);
@@ -28,13 +30,26 @@ a{
     align-items: center;
     justify-content: center;
     display: flex;
-    transition: height .3s ease-in-out;
-    overflow: hidden;
+    transition: all .3s ease-in-out;
     
 }
 .page.active{
-    height: 400px;
+    height: 360px;
     
+}
+.page.nope{
+    height: 200px;
+    width: 200px;
+    transition: all .3s ease-in-out;
+}
+.page.nope .pbox{
+    transform: translateX(-2000px);
+}
+.re{
+    position: absolute;
+}
+.page.DOB{
+    height: 400px;
 }
 .pbox1 h2{
     transform: translateY(40px);
@@ -49,21 +64,40 @@ a{
     height: 40px;
 }
 .page .pbox{
+    position: absolute;
     height: 500px;
-    width: 80%;
+    width: 310px;
     margin-bottom: 70px;
-    transform: translateX(165px);
     transition: transform .3s ease;
 
 }
 .page .pbox1{
+    position: absolute;
     transition: transform .3s ease;
     height: 400px;
-    width: 80%;
+    width: 310px;
     margin-bottom: 70px;
-    transform: translateX(300px);
+    transform: translateX(700px);
     
 }
+.rel{
+    position: absolute;
+    font-size: 100px;
+    left: 17px;
+    top: 15px;
+    rotate: 20%;
+    color: rgb(81, 81, 81);
+    transform: scale(0);
+    transition: all .1s ease;
+    
+}
+.page.nope .rel{
+    transform: scale(1.7);
+    transition: all .1s ease;
+}
+.rel:hover {
+    rotate: 45px;
+  }
 .pbox1 .log1 img{
     height: 30px;
     width: 30px;
@@ -90,20 +124,85 @@ a{
 }
 .page.active .pbox1{
     transition: transform .3s ease;
-    transform: translateX(-150px);
+    transform: translateX(0px);
 }
+.backi{
+    position: absolute;
+    font-size: 25px;
+    margin-top: -550px;
+    margin-left: -350px;
+    color: rgb(81, 81, 81);
+    transition: translatey .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+}
+.backi:hover{
+    transform: scale(1.5);
+}
+.backi1{
+    position: absolute;
+    font-size: 0px;
+    margin-top: -550px;
+    margin-left: -350px;
+    color: rgb(81, 81, 81);
+    transition: translatey .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+    
+}
+
+
 .page.active .backi{
+    transform: translatey(100px);
+    font-size: 0px;
+}
+.page.DOB .backi1{
+    font-size: 25px;
+    transform: translatey(120px);
+}
+.page.active .backi1{
+    transform: translatey(120px);
+    font-size: 25px;
+}
+.page.DOB .backi1{
     transform: translatey(100px);
 }
 .pbox h2{
     text-align:center;
     font-size: 40px;
 }
+
 .pbox1 h2{
     text-align:center;
     font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(62, 62, 62);
 }
 
+.page.DOB .pbox1{
+    transition: transform .3s ease;
+    transform: translateX(-550px);
+}
+.page .pbox3{
+    position: absolute;
+    height: 500px;
+    width: 310px;
+    margin-bottom: 70px;
+    transform: translatex(500px);
+    top: -10px;
+    transition: transform .3s ease;
+}
+.page.DOB .pbox3{
+    transform: translatex(0px);
+}
+.pbox3 .inbox{
+    position: absolute;
+    left: -20px;
+    background-color: transparent;
+    width: 500px;
+    height: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
 
 
 .box{
@@ -122,10 +221,8 @@ a{
     outline: none;
     background-color: transparent;
 }
-.inbox input:focus ~ label{
-    transform: translatey(-25px);
-}
-.box label{
+
+.pbox label,.pbox1 label{
     left: 10px;
     font-weight: 400px;
     transform: translateY(-50%);
@@ -161,7 +258,7 @@ a{
 .f_h1{
     font-size: 13px;
 }
-.pbox .button:hover{
+.pbox .button1:hover{
     transform:scale(1.04);
     transform: translateY(-2px);
 }
@@ -192,6 +289,7 @@ a{
     height: 50px;
     background-image: url(https://uploads-ssl.webflow.com/5a9ee6416e90d20001b20038/635aa147487b8374c113c246_horizontal.svg);
 }
+
 .button h6{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 60px;
@@ -199,11 +297,44 @@ a{
     font-size:27px;
     color: white;
 }
+.button1{
+    border: none;
+    transition: transform .3s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 40px;
+    margin-left: 9px;
+    background-color: aqua;
+    border-radius: 360px;
+    width: 300px;
+    height: 50px;
+    background-image: url(https://uploads-ssl.webflow.com/5a9ee6416e90d20001b20038/635aa147487b8374c113c246_horizontal.svg);
+}
+.button1 h6{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 60px;
+    text-align: center;
+    font-size:27px;
+    color: white;
+}
+
+
+.pbox3 .button{
+    float: left;
+    margin-left: 30px;
+    height: 50px;
+    width: 100px;
+}
+
+
 .sq{
     
     width: 100px;
     height: 50px;
     
+
+
 }
 .other_main
 {
@@ -291,21 +422,193 @@ a{
     height: 30px;
     width: 30px;
 }
-.backi{
-    position: absolute;
-    font-size: 25px;
-    margin-top: -550px;
-    margin-left: -350px;
-    color: rgb(81, 81, 81);
-    transition: translatey .3s ease-in-out;
-    transition: transform .3s ease-in-out;
-}
-.backi:hover{
-    transform: scale(1.5);
-}
+
 .sign:hover{
     text-decoration: underline;
 }
 .f_h1:hover{
     color: black;
 }
+
+.pbox1 .button{
+    transition: transform .3s ease;
+}
+.pbox1 .button:hover{
+    transform: translateY(-2px);
+}
+.D-day{
+    float: left;
+    width: 110px;
+}
+.day{
+    width: 90px;
+    height: 50px;
+    border-radius: 10px;
+    outline: none;
+    margin-left: -15px;
+    border: 1px solid rgb(121, 121, 121);
+}
+.D-month{
+    margin-left: 10px;
+    float: left;
+    width: 80px;
+    
+}
+.month{
+    width: 90px;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: -7px;
+    outline: none;
+    border: 1px solid rgb(121, 121, 121);
+}
+.D-year{
+    float: left;
+    width: 110px;
+}
+.year{
+    border: 1px solid rgb(121, 121, 121);
+    width: 90px;
+    height: 50px;
+    border-radius: 10px;
+    outline: none;
+    margin-left: 40px;
+}
+.D-gender{
+    float: left;
+    width: 110px;
+}
+.gender{
+    width: 345px;
+    height: 50px;
+    border-radius: 10px;
+    outline: none;
+    margin-left: -15px;
+    margin-top: 30px;
+}
+
+.pbox3 .l-day{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    left: 13px;
+    top: 175px;
+    font-family: Inter,'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: all .3s ease;
+}
+.D-day.active .l-day{
+    left: 0px;
+    top: 150px;
+    transition: all .3s ease;
+
+}
+.pbox3 .l-month{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    left: 133px;
+    top: 175px;
+    font-family: Inter,'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: all .3s ease;
+}
+.D-month.active .l-month{
+    left: 123px;
+    top: 150px;
+    transition: all .3s ease;
+}
+.pbox3 .l-year{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    left: 270px;
+    top: 175px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: all .3s ease;
+}
+.D-year.active .l-year{
+    left: 245px;
+    top: 150px;
+    transition: all .3s ease;
+
+}
+.pbox3 .l-gender{
+    position: absolute;
+    left: 4px;
+    top: 255px;
+    background-color: white;
+    transition: all .3s ease;
+}
+.D-gender.active .l-gender{
+    left: -5px;
+    top: 230px;
+    transition: all .3s ease;
+
+}
+.pbox3 h2{
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(62, 62, 62);
+    text-align: center;
+}
+.pbox3 .p1{
+    text-align:center;
+    margin-top: -17px;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.pbox3 .p2{
+    text-align:center;
+    margin-top: -18px;
+    font-size: 15px;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.button-back{
+    position: absolute;
+    border: none;
+    transition: transform .3s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    float: left;
+    left: -15px;
+    top: 320px;
+    height: 50px;
+    width: 140px;
+    background-color: aqua;
+    border-radius: 360px;
+    background-image: url(https://uploads-ssl.webflow.com/5a9ee6416e90d20001b20038/635aa147487b8374c113c246_horizontal.svg);
+}
+.button-back h6{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 60px;
+    text-align: center;
+    font-size:27px;
+    color: white;
+}
+
+.button-next{
+    position: absolute;
+    border: none;
+    transition: transform .3s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    float: left;
+    top: 320px;
+    left: 190px;
+    height: 50px;
+    width: 140px;
+    background-color: aqua;
+    border-radius: 360px;
+    background-image: url(https://uploads-ssl.webflow.com/5a9ee6416e90d20001b20038/635aa147487b8374c113c246_horizontal.svg);
+}
+.button-next h6{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 60px;
+    text-align: center;
+    font-size:27px;
+    color: white;
+}
+
+
