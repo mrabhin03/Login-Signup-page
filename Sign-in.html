@@ -49,14 +49,17 @@
                                 <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
                             </div>
                             <div class="inbox">
-                                <input type="password" required placeholder="Type your password">
+                                <input id="password" type="password" required placeholder="Type your password">
                             </div>
                             <div class="forgot">
+                                <h1 class="wrong"><a class="forgot" href="#"><b>Wrong username or password</b></a> </h1>
                                 <h1 class="f_h1"><a class="forgot" href="#"><b> Forgot password? </b></a> </h1>
                             </div>
                         </div>
                         
-                            <button class="button1" type="submit"><a href="#"><h6>Login</h6></a></button>
+                        <a href="#">
+                            <button onclick="test();" class="button1" ><h6>Login</h6></button>
+                        </a>
                     </form>
                     <div class="other_main">
                         <div class="or">
@@ -92,16 +95,19 @@
                     <form>
                         <div class="box">
                             <div class="tx">
-                            <label for="Email">Email</label><br>
+                            <label class="l-mail" for="Email">Email</label><br>
                             </div>
                             <div class="i">
                               <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
                            </div>
                             <div class="inbox">
-                                <input type="text" id="Email" required placeholder="Type your Email">
+                                <input oninput="email_entery();" type="email" id="Email" required placeholder="Type your Email">
+                                <span class="Check"><ion-icon name="checkmark-outline"></ion-icon></span>
                            </div> 
                         </div>
-                        <button class="button" type="button"><a href="#" class="next1"><h6>Next</h6></a></button>
+                        <a href="#" class="next1">
+                        <button  class="button" type="submit"><h6>Next</h6></button>
+                        </a>
                     </form>
                     <div class="other_main">
                         <div class="or">
@@ -131,19 +137,19 @@
                         <h1 class="sign">Log in</h1></a>
                     </div>
                 </div>
-                <div class="pbox3">
+                <div class="pbox2">
                     <form>
                         <h2>SIGN UP</h2>    
                         <p class="p1">Basic Information</p>
                         <p class="p2">Enter your birthday and gender</p>
-                      <div class="D-day">
-                        <label class="l-day" for="day">Day</label>
-                        <input type="number" class="day" id="day" name="day" required>
-                      </div>
-                      <div class="D-month">
-                        <label class="l-month" for="month">Month</label>
-                        <select class="month" name="month" id="month">
-                            <option value=""></option>
+                        <div class="D-day">
+                            <label class="l-day" for="day">Day</label>
+                            <input type="number" class="day" id="day" name="day" required>
+                        </div>
+                        <div class="D-month">
+                            <label class="l-month" for="month">Month</label>
+                            <select class="month" name="month" id="month">
+                            <option value="0"></option>
                             <option value="1">January</option>
                             <option value="2">February</option>
                             <option value="3">March</option>
@@ -159,7 +165,7 @@
                             
                         </select>
                     </div>
-                      <div class="D-year">
+                    <div class="D-year">
                         <label class="l-year" for="year">Year</label>
                         <input type="number" class="year" id="year" name="year"required>
                       </div>
@@ -167,18 +173,38 @@
                         
                         <label for="gender" class="l-gender">Gender</label>
                         <select id="gender" class="gender" name="gender" required>
-                          <option value=""></option>
+                          <option value="0"></option>
                           <option value="male">Male</option>
                           <option value="female">Female</option>
                           <option value="other">Other</option>
                         </select>
                       </div>
                       <div class="form-group">
-                        <button class="button-back" type="button"><a href="#" class="back1"><h6>Back</h6></a></button>
-                        <button class="button-next" type="button"><a href="#" class="next1"><h6>Next</h6></a></button>
+                        <a href="#" class="cancel"><button class="button-back" type="button"><h6>Cancel</h6></button></a>
+                        <a href="#" class="next2"><button onclick="DOBIN();" class="button-next" type="button"><h6>Next</h6></button></a>
                       </div>
                     </form>
-                  </div>
+                </div>
+                <div class="pbox3">
+                    <h2>SIGN UP</h2>
+                    <form>
+                        <div class="box">
+                            <div class="tx">
+                            <label class="l-username" for="user">Username</label><br>
+                            </div>
+                            <div class="i">
+                              <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                           </div>
+                            <div class="inbox">
+                                <input type="text" id="user_name" required placeholder="Enter your Username">
+                                <span class="Check"><ion-icon name="checkmark-outline"></ion-icon></span>
+                           </div> 
+                        </div>
+                        <a href="#" class="cancel1"><button type="button"  class="button1"><h6>Cancel</h6></button></a>
+                        <a href="#" class="next3"><button  class="button2" type="submit"><h6>Next</h6></button></a>
+                    </form>
+                    
+                </div>
             </div>
         </div>
         <script src="Sign-in.js"></script>

@@ -1,3 +1,5 @@
+/*Body*/
+
 body{
     background-image: url(https://img.freepik.com/free-vector/gradient-purple-color-gradient-background-abstract-design-modern_343694-2245.jpg?w=740&t=st=1681226916~exp=1681227516~hmac=e77d8a4e97231ed91a95a0c6fc20812739db0da90d9293b5f881e7dfda4b1a8f);
     background-size: cover;
@@ -16,13 +18,10 @@ a{
     width: 100%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.signup-link{
-    text-decoration: none;
-}
+
 .page
 {
     position: relative;
-    overflow: hidden;
     height: 600px;
     width: 400px;
     background-color: rgba(255, 255, 255, 0.95);
@@ -31,8 +30,11 @@ a{
     justify-content: center;
     display: flex;
     transition: all .3s ease-in-out;
-    
+   overflow: hidden;
 }
+
+
+/*Back Page*/
 .page.active{
     height: 360px;
     
@@ -47,38 +49,6 @@ a{
 }
 .re{
     position: absolute;
-}
-.page.DOB{
-    height: 400px;
-}
-.pbox1 h2{
-    transform: translateY(40px);
-}
-.pbox1 .box{
-    transform: translateY(50px);
-}
-.pbox1 .button{
-    margin-top: 70px;
-    margin-left: 30px;
-    width: 250px;
-    height: 40px;
-}
-.page .pbox{
-    position: absolute;
-    height: 500px;
-    width: 310px;
-    margin-bottom: 70px;
-    transition: transform .3s ease;
-
-}
-.page .pbox1{
-    position: absolute;
-    transition: transform .3s ease;
-    height: 400px;
-    width: 310px;
-    margin-bottom: 70px;
-    transform: translateX(700px);
-    
 }
 .rel{
     position: absolute;
@@ -98,113 +68,69 @@ a{
 .rel:hover {
     rotate: 45px;
   }
-.pbox1 .log1 img{
-    height: 30px;
-    width: 30px;
-    margin-left: 30px;
+
+
+
+
+
+
+/*Login Page*/
+
+.wrong{
+    position: absolute;
+    font-size: 10px;
+    left: 0px;
+    top: 50px;
+    color: rgba(255, 255, 255, 0.95);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.wrong.fail{
+    color: red;
 }
 
-.pbox1 .log2 img{
-    height: 30px;
-    width: 30px;
-    margin-left: 10px;
-}
-.pbox1 .log3 img{
-    height: 30px;
-    width: 30px;
-    margin-left: -10px;
+.signup-link{
+    text-decoration: none;
 }
 
-.pbox1 .dont{
-    margin-top: -40px;
+.page .pbox{
+    position: absolute;
+    height: 500px;
+    width: 310px;
+    margin-bottom: 70px;
+    transition: transform .3s ease;
 }
+
+
+
 .page.active .pbox{
     transition: transform .3s ease;
     transform: translateX(-600px);
 }
-.page.active .pbox1{
-    transition: transform .3s ease;
-    transform: translateX(0px);
-}
+
 .backi{
     position: absolute;
     font-size: 25px;
     margin-top: -550px;
     margin-left: -350px;
     color: rgb(81, 81, 81);
-    transition: translatey .3s ease-in-out;
-    transition: transform .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 .backi:hover{
     transform: scale(1.5);
 }
 .backi1{
+    text-align: center;
     position: absolute;
     font-size: 0px;
-    margin-top: -550px;
-    margin-left: -350px;
-    color: rgb(81, 81, 81);
-    transition: translatey .3s ease-in-out;
-    transition: transform .3s ease-in-out;
+    transform: translate(-175px,-275px);
+    color: rgb(255, 8, 8);
+    transition: all .3s ease-in-out;
     
-}
-
-
-.page.active .backi{
-    transform: translatey(100px);
-    font-size: 0px;
-}
-.page.DOB .backi1{
-    font-size: 25px;
-    transform: translatey(120px);
-}
-.page.active .backi1{
-    transform: translatey(120px);
-    font-size: 25px;
-}
-.page.DOB .backi1{
-    transform: translatey(100px);
 }
 .pbox h2{
     text-align:center;
     font-size: 40px;
 }
-
-.pbox1 h2{
-    text-align:center;
-    font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(62, 62, 62);
-}
-
-.page.DOB .pbox1{
-    transition: transform .3s ease;
-    transform: translateX(-550px);
-}
-.page .pbox3{
-    position: absolute;
-    height: 500px;
-    width: 310px;
-    margin-bottom: 70px;
-    transform: translatex(500px);
-    top: -10px;
-    transition: transform .3s ease;
-}
-.page.DOB .pbox3{
-    transform: translatex(0px);
-}
-.pbox3 .inbox{
-    position: absolute;
-    left: -20px;
-    background-color: transparent;
-    width: 500px;
-    height: 10px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-
-
 .box{
     position: relative;
     width: 95%;
@@ -221,13 +147,26 @@ a{
     outline: none;
     background-color: transparent;
 }
-
-.pbox label,.pbox1 label{
-    left: 10px;
-    font-weight: 400px;
-    transform: translateY(-50%);
-    color: rgb(108, 108, 108);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.button1{
+    border: none;
+    transition: transform .3s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 40px;
+    margin-left: 9px;
+    background-color: aqua;
+    border-radius: 360px;
+    width: 300px;
+    height: 50px;
+    background-image: url(https://uploads-ssl.webflow.com/5a9ee6416e90d20001b20038/635aa147487b8374c113c246_horizontal.svg);
+}
+.button1 h6{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 60px;
+    text-align: center;
+    font-size:27px;
+    color: white;
 }
 .icon{
     
@@ -258,30 +197,124 @@ a{
 .f_h1{
     font-size: 13px;
 }
+.dont{
+    height: 20px;
+    width: 320px;
+    margin-top: 80px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.dont p{
+    font-size: 13px;
+}
+.sign_up{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 20px;
+    width: 320px;
+}
+.sign_up h1{
+    font-size: 14px;
+}
+.back{
+    height: 30px;
+    width: 30px;
+}
+
+.sign:hover{
+    text-decoration: underline;
+}
+.f_h1:hover{
+    color: black;
+}
+
+
+
+
+
+
+/*Email page*/
+.l-mail.fail{
+    color: rgb(255, 0, 0);
+}
+
+.page .pbox1{
+    position: absolute;
+    transition: transform .3s ease;
+    height: 340px;
+    width: 310px;
+    margin-bottom: 90px;
+    transform: translateX(700px);
+    
+}
+.page.active .pbox1{
+    transition: transform .3s ease;
+    transform: translateX(0px);
+}
+.pbox1 .log1 img{
+    height: 30px;
+    width: 30px;
+    margin-left: 30px;
+}
+
+.pbox1 .log2 img{
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+}
+.pbox1 .log3 img{
+    height: 30px;
+    width: 30px;
+    margin-left: -10px;
+}
+
+.pbox1 .dont{
+    margin-top: -40px;
+}
+.page.active .backi{
+    transform: translatey(100px);
+    font-size: 0px;
+}
+
+.page.active .backi1{
+    transform: translate(-175px,-155px);
+    font-size: 25px;
+}
+.pbox1 h2{
+    text-align:center;
+    margin-top: 50px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(121, 49, 173);
+}
+
+.page.DOB .pbox1{
+    transition: transform .3s ease;
+    transform: translateX(-550px);
+}
+
+.pbox label,.pbox1 label,.pbox2 label{
+    left: 10px;
+    font-weight: 400px;
+    transform: translateY(-50%);
+    color: rgb(108, 108, 108);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .pbox .button1:hover{
     transform:scale(1.04);
     transform: translateY(-2px);
 }
-.submit{
-    transition: transform .3s ease-in-out;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    margin-top: 40px;
-    margin-left: 9px;
-    background-color: aqua;
-    border-radius: 360px;
-    width: 300px;
-    height: 50px;
-    background-image: url(https://uploads-ssl.webflow.com/5a9ee6416e90d20001b20038/635aa147487b8374c113c246_horizontal.svg);
-}
+
 .button{
     border: none;
     transition: transform .3s ease-in-out;
     align-items: center;
     justify-content: center;
     display: flex;
-    margin-top: 40px;
+    margin-top: 10px;
     margin-left: 9px;
     background-color: aqua;
     border-radius: 360px;
@@ -297,45 +330,7 @@ a{
     font-size:27px;
     color: white;
 }
-.button1{
-    border: none;
-    transition: transform .3s ease-in-out;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    margin-top: 40px;
-    margin-left: 9px;
-    background-color: aqua;
-    border-radius: 360px;
-    width: 300px;
-    height: 50px;
-    background-image: url(https://uploads-ssl.webflow.com/5a9ee6416e90d20001b20038/635aa147487b8374c113c246_horizontal.svg);
-}
-.button1 h6{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: 60px;
-    text-align: center;
-    font-size:27px;
-    color: white;
-}
 
-
-.pbox3 .button{
-    float: left;
-    margin-left: 30px;
-    height: 50px;
-    width: 100px;
-}
-
-
-.sq{
-    
-    width: 100px;
-    height: 50px;
-    
-
-
-}
 .other_main
 {
     height: 80px;
@@ -397,38 +392,7 @@ a{
 .log3 img:hover{
     transform: scale(1.05);
 }
-.dont{
-    height: 20px;
-    width: 320px;
-    margin-top: 80px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-.dont p{
-    font-size: 13px;
-}
-.sign_up{
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    height: 20px;
-    width: 320px;
-}
-.sign_up h1{
-    font-size: 14px;
-}
-.back{
-    height: 30px;
-    width: 30px;
-}
 
-.sign:hover{
-    text-decoration: underline;
-}
-.f_h1:hover{
-    color: black;
-}
 
 .pbox1 .button{
     transition: transform .3s ease;
@@ -436,6 +400,50 @@ a{
 .pbox1 .button:hover{
     transform: translateY(-2px);
 }
+.check{
+    color: green;
+    position: absolute;
+    left: 275px;
+    top: 30px;
+    font-size: 0px;
+}
+.check.true{
+    font-size: 19px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Date of Birth*/
+.page .pbox2{
+    position: absolute;
+    height: 500px;
+    width: 310px;
+    margin-bottom: 70px;
+    transform: translatex(500px);
+    top: -10px;
+    transition: all .3s ease-in-out;
+}
+.page.DOB .pbox2{
+    transform: translatex(0px);
+}
+
+
+.page.DOB .backi1{
+    transform: translate(-175px,-178px);
+}
+
+.page.DOB{
+    height: 400px;
+}
+
 .D-day{
     float: left;
     width: 110px;
@@ -487,11 +495,12 @@ a{
     margin-top: 30px;
 }
 
-.pbox3 .l-day{
+.pbox2 .l-day{
     position: absolute;
     background-color: rgb(255, 255, 255);
     left: 13px;
-    top: 175px;
+    top: 183px;
+    font-size: 18px;
     font-family: Inter,'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     transition: all .3s ease;
 }
@@ -501,11 +510,12 @@ a{
     transition: all .3s ease;
 
 }
-.pbox3 .l-month{
+.pbox2 .l-month{
     position: absolute;
     background-color: rgb(255, 255, 255);
-    left: 133px;
-    top: 175px;
+    left: 125px;
+    top: 183px;
+    font-size: 18px;
     font-family: Inter,'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     transition: all .3s ease;
 }
@@ -514,11 +524,12 @@ a{
     top: 150px;
     transition: all .3s ease;
 }
-.pbox3 .l-year{
+.pbox2 .l-year{
     position: absolute;
     background-color: rgb(255, 255, 255);
-    left: 270px;
-    top: 175px;
+    left: 265px;
+    top: 183px;
+    font-size: 18px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     transition: all .3s ease;
 }
@@ -528,10 +539,11 @@ a{
     transition: all .3s ease;
 
 }
-.pbox3 .l-gender{
+.pbox2 .l-gender{
     position: absolute;
     left: 4px;
-    top: 255px;
+    top: 261px;
+    font-size: 20px;
     background-color: white;
     transition: all .3s ease;
 }
@@ -541,20 +553,20 @@ a{
     transition: all .3s ease;
 
 }
-.pbox3 h2{
+.pbox2 h2{
     font-size: 35px;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(62, 62, 62);
+    color: rgb(121, 49, 173);
     text-align: center;
 }
-.pbox3 .p1{
+.pbox2 .p1{
     text-align:center;
     margin-top: -17px;
     font-size: 22px;
     font-family: Arial, Helvetica, sans-serif;
     
 }
-.pbox3 .p2{
+.pbox2 .p2{
     text-align:center;
     margin-top: -18px;
     font-size: 15px;
@@ -610,5 +622,134 @@ a{
     font-size:27px;
     color: white;
 }
+.D-day.fail .day{
+    border: 1px solid rgb(255, 0, 0);
+}
+.D-month.fail .month{
+    border: 1px solid rgb(255, 0, 0);
+}
+.D-year.fail .year{
+    border: 1px solid rgb(255, 0, 0);
+}
+.D-gender.fail .gender{
+    border: 1px solid rgb(255, 0, 0);
+}
 
+.form-group .button-next:hover{
+    transform: translateY(-3px);
+}
+.form-group .button-back:hover{
+    transform: translateY(-3px);
+}
+
+
+.page.user .pbox2{
+    transform: translatex(-500px);
+}
+
+
+
+
+/*Username*/
+.page.user{
+    height: 250px;
+}
+.page.user .backi1{
+    transform: translate(-175px,-102px);
+}
+.page.user .pbox3{
+    transform: translatex(0px);
+}
+.pbox3{
+    transition: all .3s ease-in-out;
+    position: absolute;
+    margin-top: -80px;
+    width: 350px;
+    transform: translatex(500px);
+}
+.pbox3 .inbox{
+    position: absolute;
+    background-color: transparent;
+    width: 500px;
+    height: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.pbox3 h2{
+    font-size: 38px;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(121, 49, 173);
+    text-align: center;
+}
+.pbox3 input{
+    position: absolute;
+    left: 30px;
+    top: 0px;
+    height: 38px;
+}
+
+.pbox3 .box{
+    position: relative;
+    top: -10px;
+    left: -10px;
+    height: 60px;
+    width: 350px;
+}
+.l-username{
+    font-weight: 400px;
+    color: rgb(108, 108, 108);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pbox3 .button1{
+    border: none;
+    position: absolute;
+    transition: transform .3s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: aqua;
+    border-radius: 360px;
+    left: -5px;
+    top: 140px;
+    width: 140px;
+    height: 50px;
+    background-image: url(https://uploads-ssl.webflow.com/5a9ee6416e90d20001b20038/635aa147487b8374c113c246_horizontal.svg);
+}
+
+.pbox3 .button1 h6{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 60px;
+    text-align: center;
+    font-size:27px;
+    color: white;
+}
+.pbox3 .button2{
+    border: none;
+    position: absolute;
+    transition: transform .3s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: aqua;
+    border-radius: 360px;
+    left: 210px;
+    top: 180px;
+    width: 140px;
+    height: 50px;
+    background-image: url(https://uploads-ssl.webflow.com/5a9ee6416e90d20001b20038/635aa147487b8374c113c246_horizontal.svg);
+}
+
+.pbox3 .button2 h6{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 60px;
+    text-align: center;
+    font-size:27px;
+    color: white;
+}
+.pbox3 .box{
+    margin-left: 12px;
+}
 
