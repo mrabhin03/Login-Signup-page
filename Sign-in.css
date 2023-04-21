@@ -30,7 +30,7 @@ a{
     justify-content: center;
     display: flex;
     transition: all .3s ease-in-out;
-   overflow: hidden;
+    overflow: hidden;
 }
 
 
@@ -81,7 +81,7 @@ a{
     font-size: 10px;
     left: 0px;
     top: 50px;
-    color: rgba(255, 255, 255, 0.95);
+    color: transparent;
     font-family: Arial, Helvetica, sans-serif;
 }
 .wrong.fail{
@@ -91,7 +91,6 @@ a{
 .signup-link{
     text-decoration: none;
 }
-
 .page .pbox{
     position: absolute;
     height: 500px;
@@ -506,7 +505,7 @@ a{
 }
 .D-day.active .l-day{
     left: 0px;
-    top: 150px;
+    top: 160px;
     transition: all .3s ease;
 
 }
@@ -521,7 +520,7 @@ a{
 }
 .D-month.active .l-month{
     left: 123px;
-    top: 150px;
+    top: 160px;
     transition: all .3s ease;
 }
 .pbox2 .l-year{
@@ -535,7 +534,7 @@ a{
 }
 .D-year.active .l-year{
     left: 245px;
-    top: 150px;
+    top: 160px;
     transition: all .3s ease;
 
 }
@@ -549,7 +548,7 @@ a{
 }
 .D-gender.active .l-gender{
     left: -5px;
-    top: 230px;
+    top: 235px;
     transition: all .3s ease;
 
 }
@@ -752,4 +751,193 @@ a{
 .pbox3 .box{
     margin-left: 12px;
 }
+.page.pass .pbox3{
+    transform: translateX(-500px);
+}
 
+
+
+
+/*Password*/
+.page.pass .pbox4{
+    transform: translateX(0px);
+}
+.page.pass{
+    height: 320px;
+}
+.page.pass .backi1{
+    transform: translate(-175px,-135px);
+}
+.pbox4{
+    transition: all .3s ease-in-out;
+    position: absolute;
+    margin-top: -80px;
+    width: 350px;
+    transform: translatex(500px);
+    transition: all .3s ease-in-out;
+}
+.pbox4 .button1{
+    border: none;
+    position: absolute;
+    transition: transform .3s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: aqua;
+    border-radius: 360px;
+    left: -5px;
+    top: 200px;
+    width: 120px;
+    height: 45px;
+    background-image: url(https://uploads-ssl.webflow.com/5a9ee6416e90d20001b20038/635aa147487b8374c113c246_horizontal.svg);
+}
+
+.pbox4 .button1 h6{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 60px;
+    text-align: center;
+    font-size:27px;
+    color: white;
+}
+.pbox4 .button2{
+    border: none;
+    position: absolute;
+    transition: transform .3s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: aqua;
+    border-radius: 360px;
+    left: 230px;
+    top: 240px;
+    width: 120px;
+    height: 45px;
+    background-image: url(https://uploads-ssl.webflow.com/5a9ee6416e90d20001b20038/635aa147487b8374c113c246_horizontal.svg);
+}
+
+.pbox4 .button2 h6{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 60px;
+    text-align: center;
+    font-size:27px;
+    color: white;
+}
+.pbox4 .box{
+    margin-left: 12px;
+}
+.pbox4 .inbox{
+    position: absolute;
+    background-color: transparent;
+    width: 500px;
+    height: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.pbox4 h2{
+    font-size: 38px;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(121, 49, 173);
+    margin-top: 15px;
+    text-align: center;
+}
+.pbox4 input{
+    position: absolute;
+    left: 30px;
+    top: 0px;
+    height: 38px;
+}
+.pbox4 label{
+    font-size: 12px;
+    color: rgb(108, 108, 108);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.pbox4 .box .icon{
+    position: absolute;
+    margin-top: 5px;
+}
+.show_pass1{
+    position: absolute;
+    top: 10px;
+    left: 300px;
+    color: rgb(108, 108, 108);
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+    
+}
+.hide_pass1{
+    position: absolute;
+    top: 10px;
+    left: 300px;
+    color: rgb(108, 108, 108);
+    font-size: 0px;
+    transition: all .3s ease-in-out;
+}
+
+
+.pbox4.show1 .show_pass1{
+    font-size: 0px;
+}
+.pbox4.show1 .hide_pass1{
+    font-size: 20px;
+}
+
+.show_pass2{
+    position: absolute;
+    top: 10px;
+    left: 300px;
+    color: rgb(108, 108, 108);
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+    
+}
+.hide_pass2{
+    position: absolute;
+    top: 10px;
+    left: 300px;
+    color: rgb(108, 108, 108);
+    font-size: 0px;
+    transition: all .3s ease-in-out;
+}
+
+
+.pbox4.show2 .show_pass2{
+    font-size: 0px;
+}
+.pbox4.show2 .hide_pass2{
+    font-size: 20px;
+}
+
+.icon_lo1{
+    position: absolute;
+    color: rgb(108, 108, 108);
+    font-size: 19px;
+}
+.icon_unlo1{
+    position: absolute;
+    color: rgb(108, 108, 108);
+    font-size: 0px;
+}
+.pbox4.show1 .icon_lo1{
+    font-size: 0px;
+}
+.pbox4.show1 .icon_unlo1{
+    font-size: 19px;
+}
+.icon_lo2{
+    position: absolute;
+    color: rgb(108, 108, 108);
+    font-size: 19px;
+}
+.icon_unlo2{
+    position: absolute;
+    color: rgb(108, 108, 108);
+    font-size: 0px;
+}
+.pbox4.show2 .icon_lo2{
+    font-size: 0px;
+}
+.pbox4.show2 .icon_unlo2{
+    font-size: 19px;
+}

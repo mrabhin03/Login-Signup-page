@@ -12,9 +12,11 @@ const sign = document.querySelector('.signup-link');
 const log = document.querySelector('.login-link');
 const n1 = document.querySelector('.next1');
 const n2 = document.querySelector('.next2');
+const n3 = document.querySelector('.next3');
 const e_check =document.querySelector('.check');
 const b1 = document.querySelector('.cancel');
-const b12 = document.querySelector('.cancel1');
+const b2 = document.querySelector('.cancel1');
+const b3 = document.querySelector('.cancel2');
 const bu = document.querySelector('.button1');
 const ba =document.querySelector('.arrow');
 const Retry =document.querySelector('.re');
@@ -26,9 +28,15 @@ const sday =document.querySelector('.D-day');
 const smonth =document.querySelector('.D-month');
 const syear =document.querySelector('.D-year');
 const sgender =document.querySelector('.D-gender');
+const pa1 =document.querySelector('.pbox4');
 dob=true;
+dobd=true;
+dobm=true;
+doby=true;
+dobg=true;
 us=true;
 em=true;
+pa=true;
 d=0;
 m=0;
 y=0;
@@ -72,7 +80,32 @@ function email_entery(){
         em=false;
     }
 }
-
+function show1(){
+    var passwordInput = document.getElementById("password1");
+    if(passwordInput.type=="password")
+    {
+        passwordInput.type="text";
+        pa1.classList.add('show1');
+    }
+    else
+    {
+        passwordInput.type="password"
+        pa1.classList.remove('show1');
+    }
+}
+function show2(){
+    var passwordInput = document.getElementById("re_password");
+    if(passwordInput.type=="password")
+    {
+        passwordInput.type="text";
+        pa1.classList.add('show2');
+    }
+    else
+    {
+        passwordInput.type="password"
+        pa1.classList.remove('show2');
+    }
+}
 function DOBIN(){
     day=document.getElementById("day").value;
     month=document.getElementById("month").value;
@@ -83,9 +116,11 @@ function DOBIN(){
         if((day>0)&&(day<31))
         {
             sday.classList.remove('fail');
+            dobd=false;
         }
         else{
             sday.classList.add('fail');
+            dobd=true;
         }
     }
     if(m!=0)
@@ -93,10 +128,12 @@ function DOBIN(){
         if(month!=0)
         {
             smonth.classList.remove('fail');
+            dobm=false;
         }
     else
         {
             smonth.classList.add('fail');
+            dobm=true;
         }
     }
     if(y!=0)
@@ -104,10 +141,12 @@ function DOBIN(){
         if((year>1960)&&(year<2023))
         {
             syear.classList.remove('fail');
+            doby=false;
         }
         else
         {
             syear.classList.add('fail');
+            doby=true;
         }
     }
     if(g!=0)
@@ -115,10 +154,12 @@ function DOBIN(){
         if(gender!=0)
         {
             sgender.classList.remove('fail');
+            dobg=false;
         }
         else
         {
             sgender.classList.add('fail');
+            dobg=true;
         }
     }
 }
@@ -157,31 +198,44 @@ forgot.addEventListener('click', ()=>{
     pages.classList.add('active');
 });
 back.addEventListener('click',()=>{
-    if(!us)
+    if(!pa)
     {
-        pages.classList.remove('user');
-        us=true;
+        pages.classList.remove('pass');
+        pa=true;
     }
     else
     {
-        if(!dob)
+        if(!us)
         {
-            pages.classList.remove('DOB');
-            dob=true;
+            pages.classList.remove('user');
+            us=true;
         }
         else
         {
-            pages.classList.remove('active');
+            if(!dob)
+            {
+                pages.classList.remove('DOB');
+                dob=true;
+            }
+            else
+            {
+                pages.classList.remove('active');
+            }
         }
     }
     
 });
+
 Retry.addEventListener('click', ()=>{
     pages.classList.remove('nope');
 });
 n2.addEventListener('click', ()=>{
-    pages.classList.add('user');
-    us=false;
+        pages.classList.add('user');
+        us=false;
+});
+n3.addEventListener('click', ()=>{
+    pages.classList.add('pass');
+    pa=false;
 });
 ba.addEventListener('click', ()=>{
     pages.classList.add('nope');
@@ -207,12 +261,21 @@ n1.addEventListener('click', ()=>{
 
 });
 b1.addEventListener('click', ()=>{
+    pages.classList.remove('pass');
     pages.classList.remove('user');
     pages.classList.remove('DOB');
     pages.classList.remove('active');
 });
-b12.addEventListener('click', ()=>{
+b2.addEventListener('click', ()=>{
+    pages.classList.remove('pass');
     pages.classList.remove('user');
     pages.classList.remove('DOB');
     pages.classList.remove('active');
+});
+b2.addEventListener('click', ()=>{
+    pages.classList.remove('pass');
+    pages.classList.remove('user');
+    pages.classList.remove('DOB');
+    pages.classList.remove('active');
+
 });
