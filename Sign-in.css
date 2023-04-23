@@ -12,8 +12,8 @@ a{
 .Main{
     align-items: center;
     justify-content: center;
-    backdrop-filter: blur(5px);
     display: flex;
+    backdrop-filter: blur(5px);
     height: 100%;
     width: 100%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -31,6 +31,7 @@ a{
     display: flex;
     transition: all .3s ease-in-out;
     overflow: hidden;
+    
 }
 
 
@@ -65,9 +66,7 @@ a{
     transform: scale(1.7);
     transition: all .1s ease;
 }
-.rel:hover {
-    rotate: 45px;
-  }
+
 
 
 
@@ -99,6 +98,31 @@ a{
     transition: transform .3s ease;
 }
 
+.show_pass_first{
+    position: absolute;
+    top: 25px;
+    left: 270px;
+    color: rgb(108, 108, 108);
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+    
+}
+.hide_pass_first{
+    position: absolute;
+    top: 25px;
+    left: 270px;
+    color: rgb(108, 108, 108);
+    font-size: 0px;
+    transition: all .3s ease-in-out;
+}
+
+
+.pbox.show_it .show_pass_first{
+    font-size: 0px;
+}
+.pbox.show_it .hide_pass_first{
+    font-size: 20px;
+}
 
 
 .page.active .pbox{
@@ -139,6 +163,8 @@ a{
     margin-left: 5px;
 }
 .box input{
+    font-size: 15px;
+    color: rgb(108, 108, 108);
     position: relative;
     width: 270px;
     height: 30px;
@@ -391,7 +417,14 @@ a{
 .log3 img:hover{
     transform: scale(1.05);
 }
-
+.pbox1 .Email_box{
+    font-size: 15px;
+    color: rgb(108, 108, 108);
+    position: absolute;
+    background-color: transparent;
+    top: 22px;
+    height: 27px;
+}
 
 .pbox1 .button{
     transition: transform .3s ease;
@@ -448,6 +481,9 @@ a{
     width: 110px;
 }
 .day{
+    font-size: 16px;
+    color: rgb(108, 108, 108);
+    text-align: center;
     width: 90px;
     height: 50px;
     border-radius: 10px;
@@ -462,6 +498,9 @@ a{
     
 }
 .month{
+    font-size: 15px;
+    color: rgb(108, 108, 108);
+    text-align: center;
     width: 90px;
     height: 50px;
     border-radius: 10px;
@@ -474,6 +513,9 @@ a{
     width: 110px;
 }
 .year{
+    font-size: 15px;
+    color: rgb(108, 108, 108);
+    text-align: center;
     border: 1px solid rgb(121, 121, 121);
     width: 90px;
     height: 50px;
@@ -486,6 +528,9 @@ a{
     width: 110px;
 }
 .gender{
+    font-size: 20px;
+    color: rgb(108, 108, 108);
+    text-align: center;
     width: 345px;
     height: 50px;
     border-radius: 10px;
@@ -666,11 +711,16 @@ a{
     width: 350px;
     transform: translatex(500px);
 }
+.pbox3 .icon{
+    position: absolute;
+    top: 35px;
+}
 .pbox3 .inbox{
     position: absolute;
     background-color: transparent;
     width: 500px;
     height: 10px;
+    top: 27px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -683,12 +733,20 @@ a{
     text-align: center;
 }
 .pbox3 input{
+    font-size: 16px;
+    color: rgb(108, 108, 108);
     position: absolute;
     left: 30px;
-    top: 0px;
-    height: 38px;
-}
+    top: 5px;
+    font-size: 15px;
+    color: rgb(108, 108, 108);
+    height: 30px;
+    background-color: transparent;
 
+}
+.pbox3.fail input::placeholder{
+    color: #ff0000;
+}
 .pbox3 .box{
     position: relative;
     top: -10px;
@@ -908,11 +966,39 @@ a{
 .pbox4.show2 .hide_pass2{
     font-size: 20px;
 }
-
+.pbox4.fail_first .pass_check::placeholder{
+    color: #ff0000;
+}
+.pbox4.fail_second .pass_check2::placeholder{
+    color: #ff0000;
+}
+.not_same{
+    color: transparent;
+    position: absolute;
+    top: 30px;
+    font-weight: normal;
+    left: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.pbox4.all_fail .not_same{
+    color: #ff0000;
+}
+.atleast_8{
+    color: transparent;
+    position: absolute;
+    top: -42px;
+    font-weight: normal;
+    left: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.pbox4.morethan8 .atleast_8{
+    color: #ff0000;
+}
 .icon_lo1{
     position: absolute;
     color: rgb(108, 108, 108);
     font-size: 19px;
+    top: 24px;
 }
 .icon_unlo1{
     position: absolute;
@@ -929,15 +1015,299 @@ a{
     position: absolute;
     color: rgb(108, 108, 108);
     font-size: 19px;
+    top: 24px;
 }
 .icon_unlo2{
     position: absolute;
     color: rgb(108, 108, 108);
     font-size: 0px;
 }
+.pbox4.all_fail .l-re_pass{
+    color: #ff0000;
+}
 .pbox4.show2 .icon_lo2{
     font-size: 0px;
 }
 .pbox4.show2 .icon_unlo2{
     font-size: 19px;
+}
+.page.ok .pbox4{
+    transform: translateX(-500px);
+}
+
+
+
+
+/*loading*/
+
+.load{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 0px;
+    width: 0px;
+    border-radius: 10%;
+    background-color: transparent;
+    transition: all .3s ease-in-out;
+}
+.page.ok .load{
+    height: 200px;
+    width: 200px;
+}
+.bar_load{
+    position: absolute;
+    top: 0px;
+    transform: translateX(-550px);
+    background-color: #25ce71;
+    width: 600px;
+    height: 5px;
+    border-radius: 30px;
+}
+.page.ok{
+    height: 350px;
+    width: 250px;
+}
+.bar_load.op{
+    transform: translateX(-500px);
+    animation: barload 5s linear 1;
+}
+
+
+@keyframes barload{
+    0%{
+        transform: translateX(-550px);
+    }
+    25%{
+        transform: translateX(-400px);
+    }
+    40%{
+        transform: translateX(-380px);
+    }
+    50%{
+        transform: translateX(-300px);
+    }
+    60%{
+        transform: translateX(-300px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+    
+
+}
+
+.bar_load1{
+    position: absolute;
+    top: 0px;
+    transform: translateX(-550px);
+    background-color: #ce2525;
+    width: 600px;
+    height: 5px;
+    border-radius: 30px;
+}
+.bar_load1.op{
+    color: #ff0000;
+    transform: translateX(-500px);
+    animation: barload1 5s linear 1;
+}
+
+@keyframes barload1{
+    0%{
+        transform: translateX(-550px);
+    }
+    25%{
+        transform: translateX(-400px);
+    }
+    40%{
+        transform: translateX(-380px);
+    }
+    50%{
+        transform: translateX(-300px);
+    }
+    60%{
+        transform: translateX(-300px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+    
+
+}
+.page.ok .loading1{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border: 5px solid transparent;
+    border-top: 7px solid #0099ff;
+    border-radius: 50%;
+    animation: load_spin1 2s linear 10;
+}
+.load.op2 .loading1{
+    height: 0px;
+    width: 0px;
+    border: none;
+}
+.page.ok .loading2{
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    border: 5px solid transparent;
+    border-top: 7px solid #ff0000;
+    border-radius: 50%;
+    animation: load_spin2 2s linear 10;
+}
+.load.op2 .loading2{
+    height: 0px;
+    width: 0px;
+    border: none;
+}
+.page.ok .loading3{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border: 5px solid transparent;
+    border-top: 7px solid #00ff59;
+    border-radius: 50%;
+    animation: load_spin3 2s linear 10;
+}
+.load.op2 .loading3{
+    height: 0px;
+    width: 0px;
+    border: none;
+}
+.check_done{
+    position: relative;
+    font-size: 0px;
+    color: #25ce71;
+}
+.load.op2 .check_done{
+    font-size: 110px;
+}
+
+@keyframes load_spin1
+{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes load_spin2
+{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+@keyframes load_spin3
+{
+    0%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(540deg);
+    }
+}
+
+
+/*Forgot page*/
+.page.forgot{
+    height: 250px;
+}
+.page.forgot .pbox{
+    transform: translateX(-500px);
+}
+.page.forgot .forgot_page{
+    transform: translate(0px,180px);
+}
+.forgot_page{
+    transform: translate(500px,180px);
+    position: absolute;
+    height: 500px;
+    width: 310px;
+    margin-bottom: 70px;
+    transition: transform .3s ease;
+}
+.forgot_page h2{
+    text-align:center;
+    margin-top: 10px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(121, 49, 173);
+}
+.buttonf1{
+    position: absolute;
+    border: none;
+    transition: transform .3s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    top: 160px;
+    left: -20px;
+    background-color: aqua;
+    border-radius: 360px;
+    width: 150px;
+    height: 50px;
+    background-image: url(https://uploads-ssl.webflow.com/5a9ee6416e90d20001b20038/635aa147487b8374c113c246_horizontal.svg);
+}
+.buttonf1 h6{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 60px;
+    text-align: center;
+    font-size:27px;
+    color: white;
+}
+.buttonf2{
+    position: absolute;
+    border: none;
+    transition: transform .3s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    top: 160px;
+    left: 180px;
+    background-color: aqua;
+    border-radius: 360px;
+    width: 150px;
+    height: 50px;
+    background-image: url(https://uploads-ssl.webflow.com/5a9ee6416e90d20001b20038/635aa147487b8374c113c246_horizontal.svg);
+}
+.buttonf2 h6{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 60px;
+    text-align: center;
+    font-size:27px;
+    color: white;
+}
+.forgot_page .box
+{
+    position: absolute;
+    top: 50px;
+    left: -25px;
+    background-color: transparent;
+    width: 350px;
+}
+.page.pass .pbox{
+    transform: translateX(-500px);
+}
+.page.pass .forgot_page{
+    transform: translate(-500px,180px);
+}
+.forgot_page.fail input::placeholder{
+    color: #ff0000;
+}
+.forgot_page h3{
+    position: absolute;
+    color: transparent;
+    top: 40px;
+    left: 0px;
+    font-size: 14px;
+    font-weight: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.forgot_page.fail_test h3{
+    color: red;
 }
