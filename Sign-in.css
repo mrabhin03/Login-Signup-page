@@ -1,10 +1,16 @@
 /*Body*/
 
-body{
+.body{
     background-image: url(https://img.freepik.com/free-vector/gradient-purple-color-gradient-background-abstract-design-modern_343694-2245.jpg?w=740&t=st=1681226916~exp=1681227516~hmac=e77d8a4e97231ed91a95a0c6fc20812739db0da90d9293b5f881e7dfda4b1a8f);
     background-size: cover;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: all .5s ease-in-out;
 
+}
+.body.welcome{
+    background-image: url(https://wallpaperboat.com/wp-content/uploads/2020/04/minimalist-4k-wallpaper-full-hd.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
 }
 a{
     text-decoration: none;
@@ -13,7 +19,6 @@ a{
     align-items: center;
     justify-content: center;
     display: flex;
-    backdrop-filter: blur(5px);
     height: 100%;
     width: 100%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -482,7 +487,7 @@ a{
 }
 .day{
     font-size: 16px;
-    color: rgb(108, 108, 108);
+    color: transparent;
     text-align: center;
     width: 90px;
     height: 50px;
@@ -499,7 +504,7 @@ a{
 }
 .month{
     font-size: 15px;
-    color: rgb(108, 108, 108);
+    color: transparent;
     text-align: center;
     width: 90px;
     height: 50px;
@@ -514,7 +519,7 @@ a{
 }
 .year{
     font-size: 15px;
-    color: rgb(108, 108, 108);
+    color: transparent;
     text-align: center;
     border: 1px solid rgb(121, 121, 121);
     width: 90px;
@@ -529,7 +534,7 @@ a{
 }
 .gender{
     font-size: 20px;
-    color: rgb(108, 108, 108);
+    color: transparent;
     text-align: center;
     width: 345px;
     height: 50px;
@@ -541,7 +546,7 @@ a{
 
 .pbox2 .l-day{
     position: absolute;
-    background-color: rgb(255, 255, 255);
+    background-color: transparent;
     left: 13px;
     top: 183px;
     font-size: 18px;
@@ -551,12 +556,13 @@ a{
 .D-day.active .l-day{
     left: 0px;
     top: 160px;
+    background-color: rgb(255, 255, 255);
     transition: all .3s ease;
 
 }
 .pbox2 .l-month{
     position: absolute;
-    background-color: rgb(255, 255, 255);
+    background-color: transparent;
     left: 125px;
     top: 183px;
     font-size: 18px;
@@ -567,10 +573,11 @@ a{
     left: 123px;
     top: 160px;
     transition: all .3s ease;
+    background-color: rgb(255, 255, 255);
 }
 .pbox2 .l-year{
     position: absolute;
-    background-color: rgb(255, 255, 255);
+    background-color: transparent;
     left: 265px;
     top: 183px;
     font-size: 18px;
@@ -581,6 +588,7 @@ a{
     left: 245px;
     top: 160px;
     transition: all .3s ease;
+    background-color: rgb(255, 255, 255);
 
 }
 .pbox2 .l-gender{
@@ -588,12 +596,13 @@ a{
     left: 4px;
     top: 261px;
     font-size: 20px;
-    background-color: white;
+    background-color: transparent;
     transition: all .3s ease;
 }
 .D-gender.active .l-gender{
     left: -5px;
     top: 235px;
+    background-color: rgb(255, 255, 255);
     transition: all .3s ease;
 
 }
@@ -1311,3 +1320,166 @@ a{
 .forgot_page.fail_test h3{
     color: red;
 }
+
+
+
+
+/*Welcome*/
+.body.welcome .page{
+    animation: page_size .5s linear 1;
+    height: 0px;
+    width: 0px;
+}
+.body.welcome .welcome{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(102, 51, 153, 0);
+}
+@keyframes page_size{
+    0%{
+        height: 600px;
+        width: 400px;
+        border-radius: 0px;
+    }
+    50%{
+        height: 200px;
+        width: 200px;
+        border-radius: 30%;
+    }
+    100%{
+        height: 0px;
+        width: 0px;
+        border-radius: 360px;
+    }
+}
+
+
+
+
+
+/*HOME*/
+.body.welcome .Main{
+    height: 0px;
+    width: 0px;
+}
+.body .welcome{
+    height: 0%;
+    width: 0%;
+    overflow: hidden;
+    transition: all .4s ease-in-out;
+}
+.body.welcome .Welcome{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.body.welcome .home{
+    color: white;
+    float: right;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0px;
+    font-size: 110%;
+    margin-right: 30px;
+    margin-top: 22px;
+    text-decoration: underline transparent;
+    text-underline-offset: 15px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+.body.welcome .home:hover{
+    text-decoration: underline white;
+    text-underline-offset: 2px;
+}
+
+.body.welcome .about{
+    color: white;
+    float: right;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0px;
+    font-size: 110%;
+    margin-right: 30px;
+    margin-top: 22px;
+    text-decoration: underline transparent;
+    text-underline-offset: 15px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+.body.welcome .about:hover{
+    text-decoration: underline white;
+    text-underline-offset: 2px;
+}
+.body.welcome .contact{
+    color: white;
+    float: right;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0px;
+    font-size: 110%;
+    margin-right: 30px;
+    margin-top: 22px;
+    text-decoration: underline transparent;
+    text-underline-offset: 15px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+.body.welcome .contact:hover{
+    text-decoration: underline white;
+    text-underline-offset: 2px;
+}
+.body.welcome .logout{
+    color: white;
+    float: right;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0px;
+    font-size: 110%;
+    margin-right: 30px;
+    margin-top: 23px;
+    text-decoration: underline transparent;
+    text-underline-offset: 15px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+.body.welcome .logout:hover{
+    text-decoration: underline white;
+    text-underline-offset: 2px;
+}
+.body.welcome .logunder{
+    height: 2px;
+    width: 50px;
+    background-color: transparent;
+}
+.body.welcome .menu2{
+    font-size: 200%;
+    color: white;
+}
+.body.welcome .hello{
+    -webkit-text-stroke: .5px rgba(164, 225, 255, 0.716);
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(255, 255, 255, 0.073);
+    text-align: center;
+    font-size: 100px;
+}
+.body.welcome .header_choose{
+    position: absolute;
+    backdrop-filter: blur(3px);
+    height: 60px;
+    top: 0px;
+    width: 100%;
+    animation: head_down .5s linear;
+}
+@keyframes head_down{
+    0%{
+        top:-20px;
+    }
+    100%{
+        top: 0px;
+    }
+}
+

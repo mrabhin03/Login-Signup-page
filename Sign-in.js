@@ -39,7 +39,7 @@ const lo =document.querySelector('.loadnow');
 const loading =document.querySelector('.load');
 const bar_load =document.querySelector('.bar_load');
 const bar_load1 =document.querySelector('.bar_load1');
-const Body =document.querySelector('.Main');
+const Body =document.querySelector('.body');
 dob=true;
 dobd=true;
 dobm=true;
@@ -48,7 +48,7 @@ dobg=true;
 us=true;
 em=true;
 pa=true;
-user='';
+user='AB';
 pass='q';
 d=0;
 m=0;
@@ -141,7 +141,7 @@ function test(){
     if((check_user==user)&&(check_pass==pass))
     {
         wrong.classList.remove('fail');
-        alert("Welcome");
+        Body.classList.add('welcome');
     }
     else
     {
@@ -149,6 +149,9 @@ function test(){
     }
         
     
+}
+function exit(){
+    Body.classList.remove('welcome');
 }
 function email_entery(){
     mail=document.getElementById("Email").value;
