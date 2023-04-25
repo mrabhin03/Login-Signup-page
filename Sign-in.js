@@ -93,6 +93,10 @@ n4.addEventListener('click', function(){
                 {
                     pa1.classList.remove('all_fail');
                     pass=passcode1;
+                    passcode01=document.getElementById("password1");
+                    passcode02=document.getElementById("re_password");
+                    passcode01.value='';
+                    passcode02.value='';
                     setTimeout(function(){
                         bar_load.classList.add('op');
                     },2000)
