@@ -1,16 +1,23 @@
 /*Body*/
-
+html{
+    height: 102%;
+}
 .body{
     background-image: url(https://img.freepik.com/free-vector/gradient-purple-color-gradient-background-abstract-design-modern_343694-2245.jpg?w=740&t=st=1681226916~exp=1681227516~hmac=e77d8a4e97231ed91a95a0c6fc20812739db0da90d9293b5f881e7dfda4b1a8f);
     background-size: cover;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     transition: all .5s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    overflow: hidden;
 
 }
 .body.welcome{
     background-image: url(https://wallpaperboat.com/wp-content/uploads/2020/04/minimalist-4k-wallpaper-full-hd.jpg);
     background-position: center;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 a{
     text-decoration: none;
@@ -29,14 +36,13 @@ a{
     position: relative;
     height: 600px;
     width: 400px;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgb(247, 247, 247);
     border-radius: 20px;
     align-items: center;
     justify-content: center;
     display: flex;
     transition: all .3s ease-in-out;
     overflow: hidden;
-    
 }
 
 
@@ -217,8 +223,8 @@ a{
 }
 
 .forgot{
-    margin: 1px;
-    float: right;
+    position: relative;
+    left: 87px;
     color: rgb(108, 108, 108);
 }
 .forgot a{
@@ -228,6 +234,7 @@ a{
     font-size: 13px;
 }
 .dont{
+    position: relative;
     height: 20px;
     width: 320px;
     margin-top: 80px;
@@ -236,9 +243,11 @@ a{
     display: flex;
 }
 .dont p{
+    position: relative;
     font-size: 13px;
 }
 .sign_up{
+    position: relative;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -269,7 +278,9 @@ a{
 .l-mail.fail{
     color: rgb(255, 0, 0);
 }
-
+.pbox1.fail1 input::placeholder{
+    color: #ff0000;
+}
 .page .pbox1{
     position: absolute;
     transition: transform .3s ease;
@@ -487,7 +498,8 @@ a{
 }
 .day{
     font-size: 16px;
-    color: transparent;
+    color: rgb(121, 121, 121);
+    background-color: transparent;
     text-align: center;
     width: 90px;
     height: 50px;
@@ -504,7 +516,8 @@ a{
 }
 .month{
     font-size: 15px;
-    color: transparent;
+    color: rgb(121, 121, 121);
+    background-color: transparent;
     text-align: center;
     width: 90px;
     height: 50px;
@@ -519,7 +532,8 @@ a{
 }
 .year{
     font-size: 15px;
-    color: transparent;
+    color: rgb(121, 121, 121);
+    background-color: transparent;
     text-align: center;
     border: 1px solid rgb(121, 121, 121);
     width: 90px;
@@ -534,7 +548,8 @@ a{
 }
 .gender{
     font-size: 20px;
-    color: transparent;
+    color: rgb(121, 121, 121);
+    background-color: transparent;
     text-align: center;
     width: 345px;
     height: 50px;
@@ -556,7 +571,7 @@ a{
 .D-day.active .l-day{
     left: 0px;
     top: 160px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(247, 247, 247);
     transition: all .3s ease;
 
 }
@@ -573,7 +588,7 @@ a{
     left: 123px;
     top: 160px;
     transition: all .3s ease;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(247, 247, 247);
 }
 .pbox2 .l-year{
     position: absolute;
@@ -588,7 +603,7 @@ a{
     left: 245px;
     top: 160px;
     transition: all .3s ease;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(247, 247, 247);
 
 }
 .pbox2 .l-gender{
@@ -602,7 +617,7 @@ a{
 .D-gender.active .l-gender{
     left: -5px;
     top: 235px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(247, 247, 247);
     transition: all .3s ease;
 
 }
@@ -1373,6 +1388,7 @@ a{
     height: 100%;
     overflow: hidden;
 }
+
 .body.welcome .home{
     color: white;
     float: right;
@@ -1456,6 +1472,8 @@ a{
     background-color: transparent;
 }
 .body.welcome .menu2{
+    top: 15px;
+    position: absolute;
     font-size: 200%;
     color: white;
 }

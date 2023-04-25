@@ -32,6 +32,7 @@ const smonth =document.querySelector('.D-month');
 const syear =document.querySelector('.D-year');
 const sgender =document.querySelector('.D-gender');
 const pa_main =document.querySelector('.pbox');
+const pa2 =document.querySelector('.pbox1');
 const pa3 =document.querySelector('.pbox3');
 const pa4 =document.querySelector('.forgot_page');
 const pa1 =document.querySelector('.pbox4');
@@ -157,10 +158,12 @@ function email_entery(){
     mail=document.getElementById("Email").value;
     if(mail<=0)
     {
-        Email.classList.add('fail');
+        pa2.classList.add('fail1');
+        Email.classList.remove('fail');
+        em=true;
     }
     else{
-        Email.classList.remove('fail');
+        pa2.classList.remove('fail1');
         if (!mail.match(/^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/)) 
         {
             e_check.classList.remove('True');
