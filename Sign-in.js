@@ -36,6 +36,7 @@ const pa2 =document.querySelector('.pbox1');
 const pa3 =document.querySelector('.pbox3');
 const pa4 =document.querySelector('.forgot_page');
 const pa1 =document.querySelector('.pbox4');
+const lov =document.querySelector('.loved');
 const lo =document.querySelector('.loadnow');
 const loading =document.querySelector('.load');
 const bar_load =document.querySelector('.bar_load');
@@ -56,6 +57,8 @@ m=0;
 y=0;
 g=0;
 ok=1;
+
+hello="";
 function forgot_password(){
     if(pass=="q")
     {
@@ -67,6 +70,9 @@ function forgot_password(){
         pages.classList.add('forgot');
     }
 }
+function isInputNumeric(inputValue) {
+    return /^\d+$/.test(inputValue);
+  }
 n4.addEventListener('click', function(){
     passcode1=document.getElementById("password1").value;
     passcode2=document.getElementById("re_password").value;
@@ -82,21 +88,46 @@ n4.addEventListener('click', function(){
         if(passcode1.length>=8)
         {
             pa1.classList.remove('morethan8');
-            if(passcode2==0)
+            let inputValue = document.getElementById("password1").value;
+            let isNumeric = isInputNumeric(inputValue);
+            
+            if (isNumeric) 
             {
-                pa1.classList.add('fail_second');
-            }
-            else
+              pa1.classList.add('onlynum');
+            } 
+            else 
             {
-                pa1.classList.remove('fail_second');
-                if(passcode1==passcode2)
+                pa1.classList.remove('onlynum');
+                if(passcode2==0)
                 {
+                    pa1.classList.add('fail_second');
+                }
+                else
+                {
+                    pa1.classList.remove('fail_second');
+                    if(passcode1==passcode2)
+                    {
+                    e_check.classList.remove('True');
                     pa1.classList.remove('all_fail');
                     pass=passcode1;
+                    mailch=document.getElementById("Email");
+                    user_namech2=document.getElementById("user_name_check");
+                    user_namech1=document.getElementById("user_name");
+                    daych=document.getElementById("day");
+                    monthch=document.getElementById("month");
+                    yearch=document.getElementById("year");
+                    genderch=document.getElementById("gender");
                     passcode01=document.getElementById("password1");
                     passcode02=document.getElementById("re_password");
                     passcode01.value='';
                     passcode02.value='';
+                    daych.value='';
+                    monthch.value='';
+                    yearch.value='';
+                    genderch.value='';
+                    mailch.value='';
+                    user_namech2.value='';
+                    user_namech1.value='';
                     setTimeout(function(){
                         bar_load.classList.add('op');
                     },2000)
@@ -128,7 +159,8 @@ n4.addEventListener('click', function(){
                 {
                     pa1.classList.add('all_fail');
                 }
-            }
+                }
+            }  
         }
         else
         {
@@ -143,10 +175,17 @@ function test(){
     wrong.classList.remove('fail');
     check_user=document.getElementById("Username").value;
     check_pass=document.getElementById("password").value;
+    user_clear=document.getElementById("Username");
+    pass_clear=document.getElementById("password");
     if((check_user==user)&&(check_pass==pass))
     {
         wrong.classList.remove('fail');
         Body.classList.add('welcome');
+        user_clear.value='';
+        pass_clear.value='';
+        hello=user;
+        qwe=document.getElementById('heloo');
+        qwe.textContent=hello;
     }
     else
     {
@@ -436,10 +475,10 @@ ba.addEventListener('click', ()=>{
 sign.addEventListener('click', ()=>{
     pages.classList.add('active');
     var passwordInput = document.getElementById("password");
+    passwordInput.value='';
     passwordInput.type="password";
     pa_main.classList.remove('show_it');
     wrong.classList.remove('fail');
-    passwordInput.value='';
 });
 log.addEventListener('click', ()=>{
     pages.classList.remove('active');

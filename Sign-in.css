@@ -3,13 +3,16 @@ html{
     height: 102%;
 }
 .body{
+    position: relative;
     background-image: url(https://img.freepik.com/free-vector/gradient-purple-color-gradient-background-abstract-design-modern_343694-2245.jpg?w=740&t=st=1681226916~exp=1681227516~hmac=e77d8a4e97231ed91a95a0c6fc20812739db0da90d9293b5f881e7dfda4b1a8f);
     background-size: cover;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     transition: all .5s ease-in-out;
-    align-items: center;
-    justify-content: center;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
 
 }
@@ -21,13 +24,16 @@ html{
 }
 a{
     text-decoration: none;
+    
 }
 .Main{
-    align-items: center;
-    justify-content: center;
     display: flex;
-    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all .5s ease-in-out;
     width: 100%;
+    height: 100%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -63,6 +69,7 @@ a{
     position: absolute;
 }
 .rel{
+    color: inherit;
     position: absolute;
     font-size: 100px;
     left: 17px;
@@ -150,7 +157,22 @@ a{
     transition: all .3s ease-in-out;
 }
 .backi:hover{
-    transform: scale(1.5);
+    animation: qw .3s linear 1;
+}
+@keyframes qw{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(20deg);
+    }
+    75%{
+        transform: rotate(-20deg);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
 }
 .backi1{
     text-align: center;
@@ -267,6 +289,60 @@ a{
 }
 .f_h1:hover{
     color: black;
+}
+.log1page1sdsad{
+    margin-left: 70px;
+    height: 50px;
+    width: 50px;
+    float: left;
+    border-radius: 360px;
+    background-color: #0099ff;
+}
+.Log1page1{
+    margin-left: 70px;
+    height: 50px;
+    width: 50px;
+    float: left;
+    border-radius: 360px;
+}
+.Log1page1 img{
+    transition: all .3s ease-in-out;
+    height: 50px;
+    width: 50px;
+    border-radius: 360px;
+}
+.Log1page1 img:hover{
+    transform: scale(1.05);
+}
+.Log2page1{
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin-left:15px ;
+    margin-right: 15px;
+}
+.Log2page1 img{
+    transition: transform .3s ease-in-out;
+    height: 50px;
+    width: 50px;
+    border-radius: 360px;
+}
+.Log2page1 img:hover{
+    transform: scale(1.05);
+}
+.Log3page1{
+    height: 50px;
+    width: 50px;
+    float: left;
+}
+.Log3page1 img{
+    transition: transform .3s ease-in-out;
+    height: 50px;
+    width: 50px;
+    border-radius: 360px;
+}
+.Log3page1 img:hover{
+    transform: scale(1.05);
 }
 
 
@@ -387,50 +463,52 @@ a{
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.log1{
-    margin-left: 70px;
-    height: 50px;
-    width: 50px;
+.Log1{
+    margin-left: 93px;
+    height: 30px;
+    width: 30px;
     float: left;
     border-radius: 360px;
+    margin-bottom: 20px;
+
 }
-.log1 img{
+.Log1 img{
     transition: transform .3s ease-in-out;
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
     border-radius: 360px;
 }
-.log1 img:hover{
+.Log1 img:hover{
     transform: scale(1.05);
 }
-.log2{
-    height: 50px;
-    width: 50px;
+.Log2{
+    height: 30px;
+    width: 30px;
     float: left;
     margin-left:15px ;
     margin-right: 15px;
 }
-.log2 img{
+.Log2 img{
     transition: transform .3s ease-in-out;
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
     border-radius: 360px;
 }
-.log2 img:hover{
+.Log2 img:hover{
     transform: scale(1.05);
 }
-.log3{
-    height: 50px;
-    width: 50px;
+.Log3{
+    height: 30px;
+    width: 30px;
     float: left;
 }
-.log3 img{
+.Log3 img{
     transition: transform .3s ease-in-out;
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
     border-radius: 360px;
 }
-.log3 img:hover{
+.Log3 img:hover{
     transform: scale(1.05);
 }
 .pbox1 .Email_box{
@@ -455,7 +533,7 @@ a{
     top: 30px;
     font-size: 0px;
 }
-.check.true{
+.check.True{
     font-size: 19px;
 }
 
@@ -773,12 +851,14 @@ a{
 }
 .pbox3 .box{
     position: relative;
-    top: -10px;
+    top: -19px;
     left: -10px;
     height: 60px;
     width: 350px;
 }
 .l-username{
+    position: relative;
+    top: 10px;
     font-weight: 400px;
     color: rgb(108, 108, 108);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -801,6 +881,16 @@ a{
 }
 .pbox3 .button1:hover{
     transform: translateY(-3px);
+}
+.pbox3 .not_av{
+    top: 51px;
+    font-size: 10px;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    color: transparent;
+}
+.pbox3.fail2 .not_av{
+    color: #ff0000;
 }
 .pbox3 .button1 h6{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -1028,6 +1118,18 @@ a{
 .pbox4.morethan8 .atleast_8{
     color: #ff0000;
 }
+.number{
+    color: transparent;
+    position: absolute;
+    top: -42px;
+    font-weight: normal;
+    left: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.pbox4.onlynum .number{
+    color: #ff0000;
+}
+
 .icon_lo1{
     position: absolute;
     color: rgb(108, 108, 108);
@@ -1265,6 +1367,9 @@ a{
     margin-bottom: 70px;
     transition: transform .3s ease;
 }
+.forgot_page .l-username{
+    top: 0px;
+}
 .forgot_page h2{
     text-align:center;
     margin-top: 10px;
@@ -1316,6 +1421,7 @@ a{
     font-size:27px;
     color: white;
 }
+
 .forgot_page .box
 {
     position: absolute;
@@ -1393,7 +1499,7 @@ a{
     overflow: hidden;
     transition: all .4s ease-in-out;
 }
-.body.welcome .Welcome{
+.body.welcome .welcome{
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -1494,6 +1600,14 @@ a{
     text-align: center;
     font-size: 100px;
 }
+.body.welcome .hello1{
+    -webkit-text-stroke: .5px rgb(193, 234, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(255, 255, 255, 0.233);
+    text-align: center;
+    font-size: 100px;
+    transform: translateY(-80px);
+}
 .body.welcome .header_choose{
     position: absolute;
     backdrop-filter: blur(3px);
@@ -1508,6 +1622,64 @@ a{
     }
     100%{
         top: 0px;
+    }
+}
+
+.loading12{
+    position: absolute;
+    height: 130px;
+    width: 130px;
+    border: 5px solid transparent;
+    border-top: 7px solid #0099ff;
+    border-radius: 50%;
+    animation: load_spin1 2s linear infinite;
+}
+
+.loading22{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border: 5px solid transparent;
+    border-top: 7px solid #ff0000;
+    border-radius: 50%;
+    animation: load_spin22 2s linear infinite;
+}
+
+.loading32{
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    border: 5px solid transparent;
+    border-top: 7px solid #00ff59;
+    border-radius: 50%;
+    animation: load_spin32 2s linear infinite;
+}
+
+@keyframes load_spin12
+{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes load_spin22
+{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+@keyframes load_spin32
+{
+    0%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(540deg);
     }
 }
 

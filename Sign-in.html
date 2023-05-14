@@ -1,19 +1,20 @@
-
-<html>
+<!DOCTYPE html>
+<html id="myhtml">
     <head>
         <title>
             Sign in
         </title>
-        <meta name="viewport" content="width=device-width initial-scale=0.6" >
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=.7" >
         <link rel="icon" href="https://img.icons8.com/color/256/html-5--v1.png">
         <link rel="stylesheet" href="Sign-in.css">
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-        
     </head>
-    <body class="body">
+    <body  class="body">
         <div class="Main">
-            <div class="page">
+            <div id="car1" class="page">
                 <label class="backi" >
                     <a class="arrow" href="#">
                         <ion-icon name="arrow-back-outline"></ion-icon>
@@ -31,7 +32,7 @@
                 </label>  
                 <div class="pbox">
                     <h2>Login</h2>
-                    <form>
+                    <form name="login" method="POST" >
                         <div class="box">
                             <div class="tx">
                             <label for="Username">Username</label><br>
@@ -40,7 +41,7 @@
                               <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
                            </div>
                             <div class="inbox">
-                                <input type="text" id="Username"  placeholder="Type your username">
+                                <input name="Username" type="text" id="Username"  placeholder="Type your username">
                            </div> 
                         </div>
                         <div class="box">
@@ -50,7 +51,7 @@
                                 <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
                             </div>
                             <div class="inbox">
-                                <input id="password" type="password" placeholder="Type your password">
+                                <input id="password" name="Password" type="password" placeholder="Type your password">
                                 <span class="show_pass_first" onclick="show_first();"><ion-icon name="eye-outline"></ion-icon></span>
                                 <span class="hide_pass_first" onclick="show_first();"><ion-icon name="eye-off-outline"></ion-icon></span>
                             </div>
@@ -68,17 +69,17 @@
                         <div class="or">
                             <p><b> Or Login Using </b></p>
                         </div>
-                        <div class="Log1">
+                        <div class="Log1page1" >
                             <a href="https://www.facebook.com/login/">
                                 <img src="https://logodix.com/logo/1253755.png" alt="">
                             </a>
                         </div>
-                        <div class="Log2">
+                        <div class="Log2page1">
                             <a href="https://twitter.com/i/flow/signup">
-                            <img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png" alt="">
+                                <img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png" alt="">
                             </a>
                         </div>
-                        <div class="Log3">
+                        <div class="Log3page1">
                             <a href="https://accounts.google.com/signin">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Google_Plus_logo_%282015-2019%29.svg/375px-Google_Plus_logo_%282015-2019%29.svg.png" alt="">
                             </a>
@@ -105,7 +106,7 @@
                            </div>
                             <div class="inbox">
                                 <input class="Email_box" style="color: rgb(108, 108, 108);" oninput="email_entery();" type="email" id="Email"  placeholder="Type your Email">
-                                <span class="Check"><ion-icon name="checkmark-outline"></ion-icon></span>
+                                <span class="check"><ion-icon name="checkmark-outline"></ion-icon></span>
                            </div> 
                         </div>
                         <a href="#" class="next1">
@@ -199,23 +200,26 @@
                            </div>
                             <div class="inbox">
                                 <input type="text" id="user_name"  placeholder="Enter your Username">
-                                <span class="Check"><ion-icon name="checkmark-outline"></ion-icon></span>
+                                <span class="check"><ion-icon name="checkmark-outline"></ion-icon></span>
                            </div> 
+                           <h4 class="not_av">Username not available</h4>
                         </div>
                         <a href="#" class="cancel2"><button type="button"  class="button1"><h6>Cancel</h6></button></a>
                         <a href="#" class="next3"><button  class="button2" type="button"><h6>Next</h6></button></a>
                     </form>
+                    
                 </div>
                 <div class="pbox4">
                     <h2>SIGN UP</h2>
                     <form>
+                        <p style="color: rgb(189, 2, 2); top: 45px; left: 80px; position: absolute; font-family: Arial, Helvetica, sans-serif;">(Don't use real passwords)</p>
                         <div class="box">
                             <div class="tx">
                             <label class="l-pass" for="user">New Password</label><br>
                             </div>
                             <div class="i">
                               <span class="icon_lo1"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                              <span class="icon_Unlo1"><ion-icon name="lock-open-outline"></ion-icon></span>
+                              <span class="icon_unlo1"><ion-icon name="lock-open-outline"></ion-icon></span>
                            </div>
                             <div class="inbox">
                                 <input class="pass_check" type="password" id="password1"  placeholder="Enter your password">
@@ -229,9 +233,10 @@
                             </div>
                             <div class="i">
                                 <span class="icon_lo2"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                                <span class="icon_Unlo2"><ion-icon name="lock-open-outline"></ion-icon></span>
+                                <span class="icon_unlo2"><ion-icon name="lock-open-outline"></ion-icon></span>
                            </div>
                            <h5 class="atleast_8">Use atleast 8 character long password</h5> 
+                           <h5 class="number">Password must have atleast one letter</h5> 
                             <div class="inbox">
                                 <input type="password" class="pass_check2" id="re_password"  placeholder="Re-Enter your New password">
                                 <span class="show_pass2" onclick="show2();"><ion-icon name="eye-outline"></ion-icon></span>
@@ -273,17 +278,18 @@
                            </div>
                             <div class="inbox">
                                 <input type="text" id="user_name_check"  placeholder="Enter your Username">
-                                <span class="Check"><ion-icon name="checkmark-outline"></ion-icon></span>
+                                <span class="check"><ion-icon name="checkmark-outline"></ion-icon></span>
                                 <h3>No Account found</h3>
                            </div> 
                         </div>
                         <a href="#" class="cancel35"><button type="button"  class="buttonf1"><h6>Cancel</h6></button></a>
                         <a href="#" class="next35"><button  class="buttonf2" type="button"><h6>Next</h6></button></a>
                     </form>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="Welcome">
+        <div class="welcome">
             <div class="header_choose">
                 
                 <h2 class="logout" onclick="exit();">Logout</h2>
@@ -297,6 +303,8 @@
             </div>
             <h1 class="hello">
                 WELCOME
+            </h1>
+            <h1 id="heloo" class="hello1">
             </h1>
         </div>
         <script src="Sign-in.js"></script>
